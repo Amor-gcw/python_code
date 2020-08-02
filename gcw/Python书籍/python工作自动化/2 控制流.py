@@ -63,31 +63,71 @@ python 控制流
  5.4 while循环语句
  利用while循环语句，可以让代码块重复执行，只要循环语句条件为T即可
  不同于if语句，if语句子句结束后程序执行if语句之后的语句，但在while循环中，程序循环跳回到while语句开始处
- exam：
+ 5.5 break 语句
+ break语句可以提前跳出while循环语句，如果执行遇到break语句，就会立马推出while语句，在代码中，仅包含break关键字
+ exam:
+ while T:
+    print('please type your name')
+    name= input('请输入你的名字')
+    if name == 'your name':
+        break
+ print('程序结束')
+ 5.5 continue 语句
+ continue语句用于循环内部，如果程序执行遇到continue语句，就会马上跳回循环处开始，重新对循环条件求值（这也是执行到达循环末尾时发生的事情）\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 5.6 for循环和range()函数
+ 通过for循环和range()函数，使得函数执行固定次数
 
 
 '''
+
+
+
+# name = ' '
+# while name != 'your name':
+#     print('please type your name')
+#     name= input('输入名字： ')
+# print('程序结束！')
+
+# name = ' '
+# while name != 'your name':
+#     print('please type your name')
+#     name = input('请输入你的名字')
+#     if name == 'your name':
+#         break
+# print('程序结束')
+
+# while True:
+#     print('who are you?')
+#     name = input('请输入你的名字')
+#     if name == '':
+#         continue
+#     print('请输入密码:')
+#     password= input('')
+#     if password == '0000':
+#         break
+# print('welcome')
+
+
+name= ''
+while name=='':
+    print('请输入你的名字:')
+    name = input()
+    print('有多少客人呢？')
+    guestnumber = input()
+    if guestnumber:
+        print('我们将准备{}间房间供客人使用'.format(guestnumber))
+    print('欢迎下次光临')
+
+
+
+
+
+
+
+
+
+
+
+
+
