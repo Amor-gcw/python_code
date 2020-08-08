@@ -77,10 +77,107 @@ python 控制流
 
  5.6 for循环和range()函数
  通过for循环和range()函数，使得函数执行固定次数
+ range()对for循环进行迭代（默认从0开始）直到最后
+
+ 5.7 等价的while循环
+ while可以做和for循环相同的事情，但是for更加简洁
+
+ 5.8 range()的开始、停止和步长参数
+ range()可以调用多个参数，参数之间用”，“分割
+ 例如：
+ for i in range(12,15):
+    print(i)
+ 结果为 12 13 14
+ 利用range()计算步长，可以设置三个参数
+ 例如：
+ for i in range(0,10,2)：
+    print(i)
+ (0,10,2)代表从0打10，中间以2为间隔
+ 结果是0，2，4，6，8
+ 也可以用负数作为步长参数进行递减
+
+6 导入模块
+ python内部可以调用一些基本的函数，称为”内建函数”。
+ 同样，也包含一些模块，成为“标准库“
+ 每个模块都是一个python程序，包含一些相关的函数，可以嵌入到程序之中，类似于R语言中的安装包
+ 导入模块使用import语句，主要包括：
+ （1）import关键字
+ （2）模块的名称
+ （3）可选的更多模块，中间用逗号隔开
+ # import random
+ # for i in range(2):
+ #     print(random.randint(90,100))
+
+7 用sys.exit()提前结束程序
+ 默认情况下，程序执行到最后总会停止，但通过使用sys模块中得exit()函数可以提前终止程序运行
+ 如：
+
+# import sys
+# while True:
+#     print("type exit to exit.")
+#     response = input()
+#     if response == 'exit':
+#         sys.exit()
+#     print('you type '+ response + '.')
+
+小结：
+1、布尔数据类型有两种，分别为True 和 Flase
+2、3个布尔操作符分别是 and/or/not
+3、布尔操作值的真值表
+4、6个比较操作符
+    > < >= <= == !=
+5、什么是条件，哪里可以使用条件
+ 条件是一个表达式，用于控制流语句中，表达结果为布尔值
+6、break和continue的区别
+ break是将执行移出循环，并接着循环执行，continue是将执行移到循环的开始
 
 
 '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# print('my name is')
+# i = 0
+# while i < 5:
+#     print('jim five times'+" "+str(i))
+#     i +=1
 
 
 # name = ' '
@@ -109,15 +206,20 @@ python 控制流
 # print('welcome')
 
 
-name= ''
-while name=='':
-    print('请输入你的名字:')
-    name = input()
-    print('有多少客人呢？')
-    guestnumber = input()
-    if guestnumber:
-        print('我们将准备{}间房间供客人使用'.format(guestnumber))
-    print('欢迎下次光临')
+# name= ''
+# while name =='':
+#     print('请输入你的名字:')
+#     name = input()
+#     print('有多少客人呢？')
+#     guestnumber = input()
+#     if guestnumber:
+#         print('{},我们将准备{}间房间供客人使用'.format(name,guestnumber))
+#     print('欢迎下次光临')
+
+# total = 0
+# for num in range(101): # 0--100
+#     total = num +total # 计算0到100相加的总和
+#     print(total)
 
 
 
